@@ -1,0 +1,39 @@
+section.feedback
+	.feedback__bg
+		img(src='./images/pattern.webp', srcset='./images/pattern@2x.webp 2x', alt='')
+	.container.container--small
+		h3.feedback__title <span>Если вы мечтаете о каком-то необычном экземпляре, <br class="d-none-desktop"> то мы найдем его для вас <br class="d-none-desktop"> или</span> сделаем под заказ эксклюзивную вещь из камня
+		.feedback__wrapper
+			.feedback__image
+				img(src='./images/feedback.webp', srcset='./images/feedback@2x.webp 2x', alt='')
+				.feedback__caption
+					.feedback__names
+						span Сергей
+						span Валерия
+					.feedback__experts Ваши персональные эксперты по камням
+			form.feedback__form(action='/', method='post', id='contacts')
+				.feedback__form-title Напишите нам и мы вам поможем
+				+field('text', 'firstName', 'firstName', 'Как к вам обращаться?', 'Иван', 'feedback__field')
+				.field.feedback__field
+					label.field__label(for='phone') удобный способ связи
+						.tabs
+							label.tabs__item
+								input(type='radio', name='communication_method', checked)
+								span
+									+icon('wa')
+									span WhatsApp
+							label.tabs__item
+								input(type='radio', name='communication_method')
+								span
+									+icon('tg')
+									span Telegram
+							label.tabs__item
+								input(type='radio', name='communication_method')
+								span
+									+icon('phone')
+									span Звонок
+					.field__wrapper
+						input(id='phone', type='phone', name='phone', placeholder='+7 (___) ___-__-__')
+				+field('textarea', 'comment', 'comment', 'Расскажите, что хотите найти', 'Напишите свои пожелания', 'feedback__field')
+				+button('Нужна помощь в поиске', 'button--primary button--medium feedback__submit', '', 'chevron-right')(type='submit')
+				.feedback__note Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с Политикой конфиденциальности

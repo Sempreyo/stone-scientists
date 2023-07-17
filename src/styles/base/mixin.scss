@@ -1,0 +1,43 @@
+/* Адаптив */
+@function _get-media-width($width, $maxmin) {
+	@if map-get($media-list, $width) {
+		$width: map-get($media-list, $width);
+
+		@if $maxmin {
+			@return $width - 1;
+		} @else {
+			@return $width;
+		}
+	} @else {
+		@return $width;
+	}
+}
+
+@mixin max($width) {
+	$width: _get-media-width($width, true);
+	@media (max-width: $width + 'px') {
+		@content;
+	}
+}
+
+@mixin min($width) {
+	$width: _get-media-width($width, false);
+	@media (min-width: $width + 'px') {
+		@content;
+	}
+}
+
+/* Ховер на десктопах */
+@mixin hover {
+	@media (min-width: 1080px) {
+		&:hover,
+		&:focus {
+			@content;
+		}
+	}
+}
+
+/* From 568px to 1440px - vw */
+@function vw($px) {
+	@return (calc($px/1440) * 100)+vw;
+}

@@ -1,0 +1,48 @@
+.lang-swither {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 4.8rem;
+	height: 4.8rem;
+	font-size: 1.4rem;
+	line-height: 1.3;
+	text-transform: uppercase;
+	border: 0.1rem solid var(--color-orange);
+	border-radius: 8rem;
+	cursor: pointer;
+	transition: var(--duration-default);
+
+	@include min(xs) {
+		display: flex;
+		width: vw(48);
+		height: vw(48);
+		font-size: vw(14);
+		border: vw(1) solid var(--color-orange);
+		border-radius: vw(80);
+	}
+
+	@include min(lg) {
+		width: 4.8rem;
+		height: 4.8rem;
+		font-size: 1.4rem;
+		border: 0.1rem solid var(--color-orange);
+		border-radius: 8rem;
+	}
+
+	@include hover {
+		border-color: var(--color-base);
+
+		span:not(.d-none) {
+			display: none;
+		}
+
+		.d-none {
+			display: block;
+		}
+	}
+
+	span {
+		user-select: none;
+		transition: var(--duration-default);
+	}
+}

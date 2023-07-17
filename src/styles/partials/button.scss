@@ -1,0 +1,137 @@
+.button {
+	$parent: &;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.8rem;
+	min-width: 4rem;
+	padding: 1.2rem 1.6rem;
+	font-size: 1.6rem;
+	line-height: 1.3;
+	font-weight: 700;
+	letter-spacing: 0.32rem;
+	text-transform: uppercase;
+	border: 0.1rem solid;
+	border-radius: 8rem;
+	cursor: pointer;
+	position: relative;
+	transition: var(--duration-default);
+
+	@include min(xs) {
+		gap: vw(12);
+		min-width: vw(48);
+		padding: vw(24) vw(32);
+		font-size: vw(16);
+		letter-spacing: vw(3.2);
+		border: vw(1) solid;
+		border-radius: vw(80);
+	}
+
+	@include min(lg) {
+		gap: 1.2rem;
+		min-width: 4.8rem;
+		padding: 2.4rem 3.2rem;
+		font-size: 1.6rem;
+		letter-spacing: 0.32rem;
+		border: 0.1rem solid;
+		border-radius: 8rem;
+	}
+
+	&__counter {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.6rem;
+		height: 1.6rem;
+		background-color: var(--color-orange);
+		border-radius: 50%;
+		overflow: hidden;
+		font-size: 1rem;
+		line-height: 1.2;
+		font-weight: 600;
+		color: var(--color-black);
+		text-transform: uppercase;
+		position: absolute;
+		top: -0.3rem;
+		right: -0.3rem;
+
+		@include min(xs) {
+			width: vw(20);
+			height: vw(20);
+			font-size: vw(12);
+			line-height: 1.3;
+			top: vw(-3);
+			right: vw(-3);
+		}
+
+		@include min(lg) {
+			width: 2rem;
+			height: 2rem;
+			font-size: 1.2rem;
+			top: -0.3rem;
+			right: -0.3rem;
+		}
+	}
+
+	&--primary {
+		border-color: var(--color-orange);
+		color: var(--color-base);
+
+		@include hover {
+			border-color: var(--color-base);
+		}
+
+		&:disabled {
+			border-color: var(--color-secondary-01);
+			color: var(--color-secondary-05);
+
+			svg {
+				color: var(--color-secondary-05);
+			}
+		}
+
+		svg {
+			color: var(--color-orange);
+		}
+	}
+
+	&--medium {
+		padding: 1.2rem 1.4rem;
+		font-size: 1.2rem;
+		letter-spacing: 0.24rem;
+
+		@include min(xs) {
+			padding: vw(18) vw(32);
+			font-size: vw(14);
+			letter-spacing: vw(2.8);
+		}
+
+		@include min(lg) {
+			padding: 1.8rem 3.2rem;
+			font-size: 1.4rem;
+			letter-spacing: 0.28rem;
+		}
+	}
+
+	&--nav {
+		padding: 1.1rem;
+		border-color: var(--color-orange);
+
+		@include min(xs) {
+			padding: vw(10);
+		}
+
+		@include min(lg) {
+			padding: 1.5rem;
+		}
+
+		@include hover {
+			border-color: var(--color-base);
+		}
+
+		svg {
+			color: var(--color-base);
+		}
+	}
+}

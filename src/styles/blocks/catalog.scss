@@ -1,0 +1,71 @@
+.catalog {
+	padding: 6.5rem 0 8rem;
+	overflow: hidden;
+
+	@include min(xs) {
+		padding: vw(65) 0 vw(120);
+	}
+
+	@include min(lg) {
+		padding: 6.5rem 0 12rem;
+	}
+
+	&__slider {
+		padding: 5rem 0 3.3rem 2.4rem;
+		position: relative;
+		overflow: visible;
+
+		@include min(xs) {
+			padding: vw(70) 0 vw(36);
+		}
+
+		@include min(lg) {
+			padding: 7rem 0 3.6rem;
+		}
+	}
+
+	&__nav {
+		display: none;
+		justify-content: space-between;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		padding: 0 7.5rem;
+
+		@include min(xs) {
+			display: flex;
+			padding: 0 vw(75);
+		}
+
+		@include min(lg) {
+			max-width: 100%;
+			padding: 0 7.5rem;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+
+		@include min(xs) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			gap: vw(20);
+		}
+
+		@include min(lg) {
+			gap: 2rem;
+		}
+	}
+
+	&__pagination {
+		order: -1;
+
+		@include min(xs) {
+			order: 0;
+		}
+	}
+}

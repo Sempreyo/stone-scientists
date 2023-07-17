@@ -1,0 +1,8 @@
+mixin field(type, id, fieldName, label, placeholder, className)
+	.field(class=className)
+		label.field__label(for=id)!= label
+		.field__wrapper
+			if type === 'textarea'
+				textarea(id=id, name=fieldName, placeholder=placeholder)&attributes(attributes)
+			else
+				input(id=id, type=type, name=fieldName, placeholder=placeholder)&attributes(attributes)

@@ -1,0 +1,24 @@
+/* Libs */
+@import "./../../node_modules/swiper/swiper";
+@import "libs/animate.css";
+
+/* Base */
+@import "base/var";
+@import "base/mixin";
+@import "base/fonts";
+@import "base/animation";
+@import "base/global";
+
+/* Partials */
+@import "partials/button";
+@import "partials/field";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/lang-swither";
+@import "partials/tabs";
+
+/* Blocks */
+@import "blocks/hero";
+@import "blocks/catalog-card";
+@import "blocks/catalog";
+@import "blocks/feedback";

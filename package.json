@@ -1,0 +1,44 @@
+{
+  "name": "stone-scientists",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sempreyo/stone-scientists.git"
+  },
+  "author": "ArtZ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sempreyo/stone-scientists/issues"
+  },
+  "homepage": "https://github.com/Sempreyo/stone-scientists#readme",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "jquery": "^3.7.0",
+    "sass": "^1.63.6"
+  },
+  "dependencies": {
+    "debug": "^4.3.4",
+    "gulp-rename": "^2.0.0",
+    "gulp-svgstore": "^9.0.0",
+    "swiper": "^10.0.4"
+  }
+}
